@@ -1,0 +1,2 @@
+module TodaychallengeHelper
+end

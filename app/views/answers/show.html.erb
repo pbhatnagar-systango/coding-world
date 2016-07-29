@@ -1,0 +1,22 @@
+<p>
+  <strong>TITLE:</strong>
+  <%= @answer.challenge.title %>
+</p>
+<p>
+  <strong>Question:</strong>
+  <%= @answer.challenge.question %>
+</p>
+<p>
+  <strong>TYPE:</strong>
+  <%= @answer.challenge.qtype %>
+</p>
+<p>
+  <strong>LEVEL:</strong>
+  <%= @answer.challenge.level %>
+</p>
+<p>
+  <strong>Answer:</strong>
+  <%= @answer.ans %>
+</p>
+
+<%= link_to 'Back', user_path %>

@@ -1,0 +1,20 @@
+<h1>Listing Challenges</h1>
+
+<table>
+  <tr>
+    <th>TITLE</th>
+    <th>TYPE</th>
+    <th>LEVEL</th>
+    <th>Date of Post</th>
+  </tr>
+  <% @challenges.each do |challenge| %>
+  <tr>
+    <td><%= challenge.title %></td>
+    <td><%= challenge.qtype %></td>
+    <td><%= challenge.level %></td>
+    <td><%= challenge.created_at %></td>
+    <td><%= link_to 'View Answers', challengeanswer_path(challenge.id)%></td> 
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'BACK', admin_path %>

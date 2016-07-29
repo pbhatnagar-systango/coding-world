@@ -1,0 +1,30 @@
+<p>
+  <strong>Title:</strong>
+  <%= @challenge.title %>
+</p>
+ 
+<p>
+  <strong>Question:</strong>
+  <%= @challenge.question %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @challenge.qtype %>
+</p>
+ 
+<p>
+  <strong>Level:</strong>
+  <%= @challenge.level %>
+</p>
+<h2>Answers</h2>
+<% @challenge.answers.each do |answer| %>
+  <p>
+    <strong>Name:</strong>
+    <%= answer.user.firstname %>
+  </p>
+ 
+  <p>
+    <strong>Answer:</strong>
+    <%= answer.ans %>
+  </p>
+<% end %>

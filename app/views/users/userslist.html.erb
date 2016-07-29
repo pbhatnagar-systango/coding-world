@@ -1,0 +1,24 @@
+<h1>Listing users</h1>
+ 
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date of Birth</th>
+    <th>Email</th>
+    <th>PROFILE PIC</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.firstname %></td>
+    <td><%= user.lastname %></td>
+    <td><%= user.dob %></td>
+    <td><%= user.email %></td>
+    <td><%=image_tag user.image.url(:thumb)%></td>
+    <td><%= link_to 'Show', show_path(user) %></td> 
+    <td><%= link_to 'Destroy', destroy_path(user),
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'BACK', admin_path %>
