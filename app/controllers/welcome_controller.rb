@@ -8,9 +8,6 @@ class WelcomeController < ApplicationController
   		end
   	end
   end
-  def challengeslist
-    @challenges=Challenge.all
-  end
   def home
   end
 end

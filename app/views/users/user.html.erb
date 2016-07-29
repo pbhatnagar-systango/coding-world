@@ -1,5 +1,8 @@
 
 hello <%=current_user.firstname%>
-<%= link_to 'View profile', userprofile_path(current_user.id) %>
+<%= link_to 'View profile', userprofile_path(current_user.id) %><br>
+<%= link_to "Today's Challenge", answers_path %><br>
+<%= link_to "C Challenges", c_challenges_list_path %><br>
+<%= link_to "C++ Challenges", cplus_challenges_list_path %><br>
+<%= link_to "Java Challenges", java_challenges_list_path %><br>
 <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
-<%= link_to "Today's Challenge", answers_path %>

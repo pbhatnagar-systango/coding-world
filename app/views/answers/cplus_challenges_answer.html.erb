@@ -1,24 +1,17 @@
-<h1>Submit today's Challenge</h1>
-<p>
-   
+<h1>Submit Challenge</h1>
+  <p>
     <%= @challenge.title %>
-
   </p>
   <p>
-    
     <%=@challenge.question %>
   </p>
   <p>
-   
     <%=@challenge.qtype%>
-
   </p>
   <p>
-   
   <%=  @challenge.level%>    
   </p>
-
-<%= form_for :answer , url: answers_path do |f| %>  <p>
+  <%= form_for :answer , url: answers_path do |f| %>  <p>
     <%= f.label :Answer  %><br>
     <%= f.text_area :ans %>
   </p>
@@ -27,4 +20,4 @@
   <p>
     <%= f.submit %>
   </p>
-<% end %>
+  <% end %>
