@@ -32,6 +32,6 @@ class AnswersController < ApplicationController
   
 	private
   	def answer_params
-    	params.require(:answer).permit(:ans,:challenge_id,:user_id)
+    	params.require(:answer).permit(:ans,:challenge_id,:domain,:status,:user_id)
   	end
 end

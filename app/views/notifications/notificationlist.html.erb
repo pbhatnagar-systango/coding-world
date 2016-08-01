@@ -1,0 +1,40 @@
+<h1>Listing Notification</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Domain</th>
+    <th>User-id</th>
+    <th>Status</th>  
+  </tr>
+  <% @notifications.each do |notification| %>
+  <tr>
+  <div id="status_<%=notification.id%>">  <td><%= notification.title %></td>
+    <td><%= notification.domain %></td>
+    <td><%= notification.user_id%></td>
+    <td id="notification_<%=notification.id%>"><%= notification.status %></td></div>
+    <td><%= link_to 'Show' , notification_path(notification) %></td>
+    <td><%= check_box_tag notification.id, 'true',false, class: 'approve_request' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'BACK', admin_path %>
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $(".approve_request").click(function(){
+
+    var notification_id =this.id;
+    
+        $.ajax({ 
+         url : '/approve_request/:id',
+         Type: "Get",
+         data: {notification_id: notification_id },
+         success : function(r)
+         { 
+           console.log("sucess") }
+         });
+       });
+   });
+ </script>

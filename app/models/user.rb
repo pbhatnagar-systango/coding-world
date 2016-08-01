@@ -19,4 +19,5 @@ class User < ApplicationRecord
     end
   end
   has_one :answer
+  has_many :notifications
 end

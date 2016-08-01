@@ -15,4 +15,5 @@ class UsersController < ApplicationController
   def userprofile
     @user = User.find(params[:id])
   end
+  
 end
